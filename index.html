@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0">
+	<meta content="ie=edge">
+	<title>百度大作业</title>
+
+<style>
+input {
+ 	width: 200px;
+ 	height: 30px;
+ 	padding-left: 10px;
+ 	border: 1px solid lightblue;
+ 	border-radius: 10px;
+ 	outline: none;
+}
+div.template {
+	color:pink;
+	margin: 10px
+}
+</style>
+
+</head>
+<body>
+<div id="app" style="background-color: #967; margin-left: 40%; margin-right: 40%">
+	<input type="text" v-model="msg.a" style="margin-left: 20%">
+	<p style="color: #486; font-weight: bold; margin-left: 40%">以下是输出</p>
+	<div class="template" style="margin-left: 40%">{{msg.a}}</div>
+</div>
+<script src="watcher.js"></script>
+<script src="observer.js"></script>
+<script src="compile.js"></script>
+<script src="mvvm.js"></script>
+
+
+<script>
+	//初始化
+	let vm = new MVVM({
+		el:"#app",
+		data:{
+			msg:{
+				a:"hello world"
+			}
+		}
+	})
+
+</script>
+
+</body>
+</html>
